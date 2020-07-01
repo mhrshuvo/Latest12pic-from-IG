@@ -26,12 +26,12 @@ async function fetchLatestPosts (profileId){
 async function creatGallery (profileId){
     const thumbnils = await fetchLatestPosts(profileId);
 
-    const container = document.createElement('div');
-    container.id = 'gallery';
+    const container    = document.createElement('div');
+          container.id = 'gallery';
 
     thumbnils.forEach(thumbnail =>{
-        const img = document.createElement('img');
-        img.src=thumbnail;
+        const img     = document.createElement('img');
+              img.src = thumbnail;
         container.appendChild(img);
     });
     document.body.appendChild (container);
